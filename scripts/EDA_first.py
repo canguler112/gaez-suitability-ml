@@ -9,13 +9,12 @@ import matplotlib.pyplot as plt
 # 0) LOAD
 # =========================
 PATH = r"C:\Users\cangu\OneDrive\Desktop\Agriculture\data\processed\wheat_maize_100k_power_soilgrids_0_30_1000m.parquet"
-assert os.path.exists(PATH), f"Dosya bulunamadı: {PATH}"
+assert os.path.exists(PATH), f"File not found: {PATH}"
 
 try:
     df = pd.read_parquet(PATH, engine="pyarrow")
 except ImportError as e:
     raise ImportError(
-        "Parquet okumak için 'pyarrow' gerekli.\n"
         "Conda: conda install -c conda-forge pyarrow\n"
         "Pip:   pip install pyarrow"
     ) from e
@@ -66,8 +65,8 @@ lon_col = find_col(["lon", "longitude", "x"])
 
 if crop_col is None or target_col is None:
     raise ValueError(
-        f"Kolon tespiti başarısız. crop_col={crop_col}, target_col={target_col}\n"
-        f"Kolonlar: {list(df.columns)[:30]} ... (toplam {len(df.columns)})"
+        f"Column detection failed. crop_col={crop_col}, target_col={target_col}\n"
+        f"Columns: {list(df.columns)[:30]} ... (toplam {len(df.columns)})"
     )
 
 print("Detected columns:")
