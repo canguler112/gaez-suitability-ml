@@ -278,8 +278,8 @@ def write_interpretation_txt(results_df, comparison_df, output_path):
         lines.append(f"  All fold differences positive: {row['all_differences_positive']}")
         lines.append("")
 
-    # Short thesis-ready interpretation
-    lines.append("Thesis-ready interpretation:")
+    # Short interpretation
+    lines.append("Interpretation:")
     lines.append(
         "XGB-rs04 was compared with RF-rs03/RF-rsbest using fold-level paired tests "
         "under the same 2.0 degree spatial block cross-validation folds. "
