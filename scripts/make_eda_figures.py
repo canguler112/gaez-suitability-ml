@@ -91,7 +91,7 @@ def clean_axes(ax):
 # =========================
 
 try:
-    log(">>> RUNNING EDA_FINAL_DEBUGSAVE <<<")
+    log(">>> RUNNING <<<")
     log(f"CWD    = {os.getcwd()}")
     log(f"OUTDIR = {OUT_DIR}")
 
@@ -294,8 +294,8 @@ try:
 
         save_fig("99_spatial_target.png")
 
-    log("\n✅ EDA finished successfully.")
-    log(f"✅ Open folder: {OUT_DIR}")
+    log("\nEDA finished successfully.")
+    log(f"Open folder: {OUT_DIR}")
 
 except Exception as e:
     write_error_file(e)
