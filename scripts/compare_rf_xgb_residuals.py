@@ -336,7 +336,7 @@ What to check:
    - Check whether XGB improves performance for both wheat and maize.
    - If maize remains harder for both models, discuss crop-level heterogeneity.
 
-Thesis-ready interpretation template:
+Interpretation template:
 Both models showed a regression-to-the-mean error pattern under 2.0° spatial block cross-validation. Low observed suitability values tended to be overpredicted, whereas high observed suitability values tended to be underpredicted. This suggests that extreme suitability conditions were harder to approximate than mid-range suitability values. XGB-rs04 should be interpreted as the stronger model if it reduces RMSE, MAE, residual spread, and bin-level errors relative to RF-rsbest.
 """
 
