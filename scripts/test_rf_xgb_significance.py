@@ -1,7 +1,8 @@
 # test_rf_xgb_significance.py
 #
 # Purpose:
-# Fold-level paired statistical comparison between RF-rs03 / RF-rsbest
+# Fold-level paired statistical comparison between RF-rs03 and XGB-rs04.
+# The RF prediction file is stored with the rsbest filename for compatibility.
 # and XGB-rs04 under 2.0 degree spatial block cross-validation.
 #
 # Tests:
