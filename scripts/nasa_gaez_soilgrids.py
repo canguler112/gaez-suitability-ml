@@ -29,7 +29,7 @@ WEIGHTS = {"0-5cm": 5/30, "5-15cm": 10/30, "15-30cm": 15/30}
 BASE_URL = "https://files.isric.org/soilgrids/latest/data_aggregated/1000m"
 
 # SoilGrids integer scaling → conventional units (divide by factor)
-# From SoilGrids docs table.  :contentReference[oaicite:7]{index=7}
+
 DIV_FACTOR = {
     "clay": 10,    # g/kg -> % (g/100g)
     "sand": 10,
@@ -44,7 +44,7 @@ DIV_FACTOR = {
 # Download helper (optional)
 # -----------------------------
 def url_for(prop: str, depth: str) -> str:
-    # Pattern verified on ISRIC WebDAV index pages. :contentReference[oaicite:8]{index=8}
+  
     return f"{BASE_URL}/{prop}/{prop}_{depth}_mean_1000.tif"
 
 def local_path(prop: str, depth: str) -> Path:
@@ -149,7 +149,7 @@ def main(download_first: bool = True) -> None:
             arr = sample_raster_at_points(rp, lats, lons)
 
             # convert integer-scaled values to conventional units (divide by factor)
-            arr = arr / DIV_FACTOR[prop]  # :contentReference[oaicite:9]{index=9}
+            arr = arr / DIV_FACTOR[prop]  
 
             values[(prop, depth)] = arr
 
@@ -173,7 +173,7 @@ def main(download_first: bool = True) -> None:
     # Save
     Path(OUT_PARQUET).parent.mkdir(parents=True, exist_ok=True)
     df.to_parquet(OUT_PARQUET, index=False)
-    print(f"\n✅ Wrote final file: {OUT_PARQUET}")
+    print(f"\nWrote final file: {OUT_PARQUET}")
     print("Added columns:", [f"sg_{p}_0_30" for p in PROPS])
 
 
