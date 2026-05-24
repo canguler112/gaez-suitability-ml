@@ -2,7 +2,7 @@
 
 This repository contains the code used for my MSc thesis on approximating GAEZ v4 rainfed crop suitability scores with machine-learning models. The project focuses on wheat and maize, using climate variables from NASA POWER and soil variables from SoilGrids to predict GAEZ suitability scores under spatial block cross-validation.
 
-The main goal is not to replace GAEZ, but to test whether a smaller set of openly available predictors can approximate its suitability outputs in a reproducible way. The workflow includes data preparation, Random Forest and XGBoost modelling, hyperparameter search, residual analysis, crop-level subgroup analysis, statistical comparison, and XGBoost feature contribution analysis.
+The main goal is not to replace GAEZ, but to test whether a smaller set of openly available predictors can approximate its suitability outputs in a reproducible way. The workflow includes data preparation, Random Forest and XGBoost modelling, hyperparameter search, residual analysis, crop-level subgroup analysis, statistical comparison, and feature-importance analysis for the final models.
 
 Raw datasets are not included in this repository because they are large and should be accessed through their original sources: the GAEZ v4 data portal, NASA POWER, and SoilGrids. The scripts assume that the processed model-ready files are stored locally in the expected `data/processed/` structure.
 
