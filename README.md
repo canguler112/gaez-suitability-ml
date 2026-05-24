@@ -17,7 +17,7 @@ The main workflow is implemented through the scripts in the `scripts/` folder:
 - `export_rf_cv_predictions_rsbest.py` and `export_xgb_cv_predictions_rs04.py` export out-of-sample spatial CV predictions.
 - `plot_rf_cv_diagnostics_rsbest.py`, `plot_xgb_cv_diagnostics_rs04.py`, and `compare_rf_xgb_residuals.py` create residual diagnostics.
 - `analyze_crop_subgroups_rs04.py` computes wheat and maize subgroup metrics.
-- `analyze_shap_xgb_rs04.py` and `analyze_rf_feature_importance_rs03.py` computes XGBoost and Random Forest feature contributions for final models.
+- `analyze_shap_xgb_rs04.py` and `analyze_rf_feature_importance_rs03.py` compute XGBoost and Random Forest feature contributions for final models.
 - `test_rf_xgb_significance.py` runs the fold-level RF versus XGBoost comparison.
 
 ## Environment
